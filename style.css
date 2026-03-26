@@ -1,12 +1,11 @@
 /* ---------------------- */
-/* ---------------------- */
-/* Reset & Body           */
+/* Body (Dark Theme)      */
 /* ---------------------- */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
-  color: #333;
+  background: #0f172a;
+  color: #e2e8f0;
   text-align: center;
 }
 
@@ -14,37 +13,35 @@ body {
 /* Header                 */
 /* ---------------------- */
 header {
-  background: rgba(0,0,0,0.7);
-  color: #fff;
+  background: #020617;
+  color: #38bdf8;
   padding: 50px 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.8);
 }
 
 header h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.2rem;
-  color: #f0f0f0;
+  color: #94a3b8;
 }
 
 /* ---------------------- */
-/* Main Sections          */
+/* Sections               */
 /* ---------------------- */
 main {
   max-width: 900px;
-  margin: 0 auto;
+  margin: auto;
   padding: 20px;
 }
 
 section {
-  background: rgba(255,255,255,0.95);
+  background: #020617;
   margin: 30px 0;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   transition: transform 0.3s ease;
 }
 
@@ -53,9 +50,8 @@ section:hover {
 }
 
 section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #66a6ff;
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -64,55 +60,55 @@ section h2 {
 /* About Section          */
 /* ---------------------- */
 .about p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
+  line-height: 1.7;
   max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
+  margin: auto;
 }
 
 /* ---------------------- */
-/* Skills Section         */
+/* Skills Grid            */
 /* ---------------------- */
-ul {
-  list-style-type: none;
-  padding: 0;
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
 }
 
-li {
-  background: #f0f8ff;
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 10px;
+.skill-box {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-li:hover {
-  background: #66a6ff;
-  color: #fff;
+.skill-box:hover {
+  background: #38bdf8;
+  color: #020617;
+  transform: scale(1.05);
 }
 
 /* ---------------------- */
-/* Projects Section       */
+/* Projects               */
 /* ---------------------- */
 .project-card {
-  background: #66a6ff;
-  color: #fff;
+  background: #1e293b;
   padding: 20px;
-  margin: 15px auto;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 15px;
+  transition: 0.3s;
 }
 
 .project-card:hover {
+  background: #38bdf8;
+  color: #020617;
   transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* ---------------------- */
-/* Contact Section        */
+/* Contact Form           */
 /* ---------------------- */
 form {
   display: flex;
@@ -122,75 +118,58 @@ form {
 
 input, textarea {
   width: 80%;
-  padding: 15px;
+  padding: 12px;
   margin: 10px 0;
   border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
+  border: none;
+  outline: none;
 }
 
 button {
-  padding: 15px 30px;
-  background: #66a6ff;
-  color: white;
-  font-weight: bold;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: #020617;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #89f7fe;
-  transform: scale(1.05);
+  background: #0ea5e9;
 }
 
 #form-status {
   margin-top: 10px;
-  font-weight: bold;
-  color: green;
 }
 
 /* ---------------------- */
 /* Responsive Design      */
 /* ---------------------- */
 
-/* Tablets (768px and below) */
-@media screen and (max-width: 768px) {
-  header h1 {
-    font-size: 2.5rem;
+/* Tablet */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  header p {
-    font-size: 1rem;
-  }
-  section {
-    padding: 25px;
-    margin: 20px 10px;
-  }
+
   input, textarea {
     width: 90%;
   }
+
   button {
     width: 90%;
   }
 }
 
-/* Mobile Phones (480px and below) */
-@media screen and (max-width: 480px) {
+/* Mobile */
+@media (max-width: 480px) {
   header h1 {
     font-size: 2rem;
   }
-  header p {
-    font-size: 0.9rem;
-  }
-  section h2 {
-    font-size: 1.5rem;
-  }
-  li {
-    font-size: 0.95rem;
-    padding: 10px;
-  }
-  input, textarea, button {
-    width: 95%;
+
+  .skills-container {
+    grid-template-columns: 1fr;
   }
 }
