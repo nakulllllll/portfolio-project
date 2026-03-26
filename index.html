@@ -1,66 +1,195 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NAKUL PORTFOLIO</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ---------------------- */
+/* Reset & Body           */
+/* ---------------------- */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  color: #333;
+  text-align: center;
+}
 
-<header>
-  <h1>NAKUL SAJEESH</h1>
-  <p>BCA Student | Web Developer</p>
-</header>
+/* ---------------------- */
+/* Header                 */
+/* ---------------------- */
+header {
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 50px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
-<main>
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
 
-  <!-- About / Introduction Section -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I am <strong>Nakul Sajeesh</strong>, currently pursuing a 
-      <strong>BCA in Cloud Computing</strong> at 
-      <strong>Kristu Jayanti University</strong>. I have a passion for web development and exploring 
-      new technologies. I enjoy building projects that combine creativity and functionality, 
-      and I am always eager to learn more about cloud technologies, programming, and modern web tools.
-    </p>
-  </section>
+header p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
 
-  <!-- Skills Section -->
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>Web Development</li>
-      <li>Linux Basics</li>
-    </ul>
-  </section>
+/* ---------------------- */
+/* Main Sections          */
+/* ---------------------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  <!-- Projects Section -->
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>Built with HTML, CSS, JavaScript & Supabase backend.</p>
-    </div>
-  </section>
+section {
+  background: rgba(255,255,255,0.95);
+  margin: 30px 0;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
 
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <form id="form">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-      <p id="form-status"></p>
-    </form>
-  </section>
+section:hover {
+  transform: translateY(-5px);
+}
 
-</main>
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #66a6ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+/* ---------------------- */
+/* About Section          */
+/* ---------------------- */
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ---------------------- */
+/* Skills Section         */
+/* ---------------------- */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #f0f8ff;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+li:hover {
+  background: #66a6ff;
+  color: #fff;
+}
+
+/* ---------------------- */
+/* Projects Section       */
+/* ---------------------- */
+.project-card {
+  background: #66a6ff;
+  color: #fff;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ---------------------- */
+/* Contact Section        */
+/* ---------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  padding: 15px 30px;
+  background: #66a6ff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #89f7fe;
+  transform: scale(1.05);
+}
+
+#form-status {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+/* ---------------------- */
+/* Responsive Design      */
+/* ---------------------- */
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  section {
+    padding: 25px;
+    margin: 20px 10px;
+  }
+  input, textarea {
+    width: 90%;
+  }
+  button {
+    width: 90%;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  section h2 {
+    font-size: 1.5rem;
+  }
+  li {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+  input, textarea, button {
+    width: 95%;
+  }
+}
