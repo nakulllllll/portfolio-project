@@ -1,44 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>NAKUL PORTFOLIO</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f4f4f4;
+  text-align: center;
+}
 
-<body>
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+}
 
-<header>
-  <h1>NAKUL SAJEESH</h1>
-  <p>BCA STUDENT | WEB DEVELOPER</p>
-</header>
+section {
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
 
-<section>
-  <h2>SKILLS</h2>
-  <ul>
-    <li>PYTHON</li>
-    <li>WEB DEVELOPMENT</li>
-    <li>LINUX BASICS</li>
-  </ul>
-</section>
+h1, h2 {
+  margin: 10px;
+}
 
-<section>
-  <h2>PROJECTS</h2>
-  <p>PORTFOLIO WEBSITE WITH SUPABASE BACKEND</p>
-</section>
+ul {
+  list-style: none;
+  padding: 0;
+}
 
-<section>
-  <h2>CONTACT ME</h2>
+li {
+  background: #eee;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
 
-  <form id="form">
-    <input type="text" id="name" placeholder="NAME" required>
-    <input type="email" id="email" placeholder="EMAIL" required>
-    <textarea id="message" placeholder="MESSAGE"></textarea>
-    <button type="submit">SEND</button>
-  </form>
-</section>
+input, textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<script src="script.js"></script>
+button {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-</body>
-</html>
+button:hover {
+  background: #555;
+}
