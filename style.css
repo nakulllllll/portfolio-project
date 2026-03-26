@@ -38,37 +38,22 @@ main {
 /* SECTIONS */
 section {
   background: #020617;
-  margin: 20px 0;
-  padding: 20px;
+  margin: 30px 0;
+  padding: 30px;
   border-radius: 15px;
-  transition: 0.3s;
-}
-
-section:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* HEADINGS */
 h2 {
   color: #38bdf8;
-  cursor: pointer;
-}
-
-/* CONTENT HIDDEN */
-.content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-
-/* ACTIVE SECTION */
-section.active .content {
-  max-height: 500px;
-  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 /* ABOUT */
 .about p {
+  max-width: 700px;
+  margin: auto;
   line-height: 1.6;
 }
 
@@ -77,7 +62,7 @@ section.active .content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .skill-box {
@@ -98,10 +83,10 @@ section.active .content {
   background: #1e293b;
   padding: 20px;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
-/* FORM INPUTS */
+/* FORM */
 input, textarea {
   width: 80%;
   padding: 12px;
