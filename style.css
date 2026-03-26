@@ -1,4 +1,6 @@
-/* Reset & Body */
+/* ---------------------- */
+/* Reset & Body           */
+/* ---------------------- */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -7,7 +9,9 @@ body {
   text-align: center;
 }
 
-/* Header */
+/* ---------------------- */
+/* Header                 */
+/* ---------------------- */
 header {
   background: rgba(0,0,0,0.7);
   color: #fff;
@@ -25,7 +29,9 @@ header p {
   color: #f0f0f0;
 }
 
-/* Main Sections */
+/* ---------------------- */
+/* Main Sections          */
+/* ---------------------- */
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -53,7 +59,21 @@ section h2 {
   padding-bottom: 5px;
 }
 
-/* Skills */
+/* ---------------------- */
+/* About Section          */
+/* ---------------------- */
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ---------------------- */
+/* Skills Section         */
+/* ---------------------- */
 ul {
   list-style-type: none;
   padding: 0;
@@ -73,7 +93,9 @@ li:hover {
   color: #fff;
 }
 
-/* Projects */
+/* ---------------------- */
+/* Projects Section       */
+/* ---------------------- */
 .project-card {
   background: #66a6ff;
   color: #fff;
@@ -88,7 +110,9 @@ li:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Form */
+/* ---------------------- */
+/* Contact Section        */
+/* ---------------------- */
 form {
   display: flex;
   flex-direction: column;
