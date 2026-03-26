@@ -9,9 +9,9 @@ const client = Supabase.createClient(supabaseUrl, supabaseKey);
 document.getElementById("form").addEventListener("submit", async function(e){
   e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+  const name = document.getElementById("NAME").value.trim();
+  const email = document.getElementById("EMAIL").value.trim();
+  const message = document.getElementById("MESSAGE").value.trim();
 
   if (!name || !email || !message) {
     document.getElementById("form-status").textContent = "Fill all fields";
