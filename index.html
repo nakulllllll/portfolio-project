@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+</head>
+<body>
+
+<h1>Nakul Sajeesh</h1>
+<p>BCA Student | Web Developer</p>
+
+<h2>Contact Me</h2>
+
+<form id="form">
+  <input type="text" id="name" placeholder="Name" required><br><br>
+  <input type="email" id="email" placeholder="Email" required><br><br>
+  <textarea id="message" placeholder="Message"></textarea><br><br>
+  <button type="submit">Send</button>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script>
+const supabaseUrl = "https://pufvuhulkttkzkxrconb.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1ZnZ1aHVsa3R0a3preHJjb25iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0OTg1ODMsImV4cCI6MjA5MDA3NDU4M30.0l8UnwSKCfqe5NYo70TFcQqCC2o-BNBJga2zFS_CrG4";
+
+const client = supabase.createClient(supabaseUrl, supabaseKey);
+document.getElementById("form").addEventListener("submit", async function(e){
+  e.preventDefault();
+
+  const { data, error } = await client
+    .from("FEEDBACK")
+    .insert([
+      {
+        NAME: document.getElementById("name").value,
+        EMAIL: document.getElementById("email").value,
+        MESSAGE: document.getElementById("message").value
+      }
+    ]);
+
+  if(error){
+    alert("Error saving data");
+    console.log(error);
+  } else {
+    alert("Message saved!");
+  }
+});
+</script>
+
+</body>
+</html>
