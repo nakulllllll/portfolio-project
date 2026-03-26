@@ -1,3 +1,8 @@
+
+console.log("Script loaded");
+
+const form = document.getElementById("form");
+console.log("Form:", form);
 // Access Supabase correctly
 const { createClient } = supabase;
 
