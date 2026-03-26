@@ -1,44 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NAKUL PORTFOLIO</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
   <h1>NAKUL SAJEESH</h1>
-  <p>BCA STUDENT | WEB DEVELOPER</p>
+  <p>BCA Student | Web Developer</p>
 </header>
 
-<section>
-  <h2>SKILLS</h2>
-  <ul>
-    <li>PYTHON</li>
-    <li>WEB DEVELOPMENT</li>
-    <li>LINUX BASICS</li>
-  </ul>
-</section>
+<main>
 
-<section>
-  <h2>PROJECTS</h2>
-  <p>PORTFOLIO WEBSITE WITH SUPABASE BACKEND</p>
-</section>
+  <!-- About / Introduction Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I am <strong>Nakul Sajeesh</strong>, currently pursuing a 
+      <strong>BCA in Cloud Computing</strong> at 
+      <strong>Kristu Jayanti University</strong>. I have a passion for web development and exploring 
+      new technologies. I enjoy building projects that combine creativity and functionality, 
+      and I am always eager to learn more about cloud technologies, programming, and modern web tools.
+    </p>
+  </section>
 
-<section>
-  <h2>CONTACT ME</h2>
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Web Development</li>
+      <li>Linux Basics</li>
+    </ul>
+  </section>
 
-  <form id="form">
-    <input type="text" id="name" placeholder="NAME" required>
-    <input type="email" id="email" placeholder="EMAIL" required>
-    <textarea id="message" placeholder="MESSAGE"></textarea>
-    <button type="submit">SEND</button>
-  </form>
-</section>
+  <!-- Projects Section -->
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Built with HTML, CSS, JavaScript & Supabase backend.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form id="form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <p id="form-status"></p>
+    </form>
+  </section>
+
+</main>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
